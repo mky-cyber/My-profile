@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene id = "my-view">
+      <a-assets>
+        <a-asset-item
+          id="scene"
+          src="./assets/pokemon_firered_-_players_room/scene.gltf"
+        >
+        </a-asset-item>
+        <a-asset-item
+          id="pikachu"
+          src="./assets/pikapool/scene.gltf"
+        >
+        </a-asset-item>
+      </a-assets>
+      <a-entity
+        id="pika"
+        class="objects"
+        gltf-model="#pikachu"
+        position="-1 0.3 1"
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1"
+        >
+      </a-entity>
+      <a-plane 
+        class="background"
+        gltf-model="#scene"
+        position="0 0 0"
+        rotation="0 0 0"
+        scale="1 1 1"
+      >
+      </a-plane>
+      <a-sky 
+        color="#ECECEC"
+      >
+      </a-sky>
+    </a-scene>
+  </body>
+</html>
